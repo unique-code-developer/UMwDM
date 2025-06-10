@@ -13,7 +13,6 @@ class BatchGenerator(Sequence):
         self.on_epoch_end()
 
     def __len__(self):
-        # liczba batchy na epokę
         return int(np.ceil(len(self.images) / self.batch_size))
 
     def __getitem__(self, index):
